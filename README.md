@@ -1,4 +1,4 @@
-# WEB102 Project 2: **Flashcards! Part 2**  
+# WEB102 Project 3: **Flashcards! Part 2**  
 Submitted by: **James Levi**  
 
 **Flashcards! Part 2** is an interactive React web application that enhances the flashcard study experience. Users can enter answers, receive feedback on their responses, and track their progress with streak counters. The flashcards are already randomized, ensuring a varied learning experience each session. Users can navigate forward and backward through the cards and mark mastered ones to remove them from the study pool.
@@ -75,4 +75,3 @@ limitations under the License.
 
 ---
 
-This README keeps things concise while highlighting all your achievements and technical improvements. Let me know if you need any edits! 🚀
