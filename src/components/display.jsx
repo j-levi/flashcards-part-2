@@ -1,9 +1,8 @@
-//display.jsx
 import React, { useState } from "react"
 import './display.css'
-import TextInputForm from './TextInputForm'; // Import the new component
+import TextInputForm from './TextInputForm';
 
-const Display = ({ question, answer, color, image, next, back, answerStatus, submit }) => {
+const Display = ({ question, answer, color, image, next, back, answerStatus, submit, markMastered, isMastered }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleFlip = () => {
@@ -12,8 +11,8 @@ const Display = ({ question, answer, color, image, next, back, answerStatus, sub
 
   return (
     <div className="display-box">
-            <div className="card">
-                <div 
+      <div className="card">
+        <div 
           className={`card-inner ${isFlipped ? 'flipped' : ''}`} 
           onClick={handleFlip}
         >
@@ -34,8 +33,11 @@ const Display = ({ question, answer, color, image, next, back, answerStatus, sub
       </div>
 
       <div className="button-container">
-        <button onClick={next}> Next </button>
-<button onClick={back}> Back </button>
+        <button onClick={next}>Next</button>
+        <button onClick={back}>Back</button>
+        <button onClick={markMastered} disabled={isMastered}>
+          {isMastered ? "Mastered" : "Mark as Mastered"}
+        </button>
       </div>
       
       <TextInputForm answerStatus={answerStatus} submit={submit} />
@@ -43,5 +45,4 @@ const Display = ({ question, answer, color, image, next, back, answerStatus, sub
   )
 }
 
-export default Display
-
+export default Display;
